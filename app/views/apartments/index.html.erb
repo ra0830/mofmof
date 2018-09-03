@@ -1,0 +1,27 @@
+<h1>物件一覧</h1>
+
+<table>
+  <tr>
+    <th>物件名</th>
+    <th>賃料</th>
+    <th>住所</th>
+    <th>築年数</th>
+    <th>備考</th>
+  </tr>
+
+<% @apartments.each do |apartment| %>
+  <tr>
+    <td><%= apartment.name %></td>
+    <td><%= apartment.rent %></td>
+    <td><%= apartment.adress %></td>
+    <td><%= apartment.year %></td>
+    <td><%= apartment.info %></td>
+
+    <td><%= link_to "詳細", apartment_path(apartment.id) %></td>
+    <td><%= link_to "編集", edit_apartment_path(apartment.id) %></td>
+    <td><%= link_to '削除する', apartment_path(apartment.id), method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br>
+<%= link_to '新しい物件を投稿する', new_apartment_path %>

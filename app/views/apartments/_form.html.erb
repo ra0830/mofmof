@@ -1,0 +1,49 @@
+<%= form_for @apartment do |form| %>
+  <div class="apartment_title">
+    <%= form.label :"物件名" %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="apartment_title">
+    <%= form.label :"家賃" %>
+    <%= form.text_field :rent %>
+  </div>
+  <div class="apartment_title">
+    <%= form.label :"住所" %>
+    <%= form.text_field :adress %>
+  </div>
+  <div class="apartment_title">
+    <%= form.label :"築年数" %>
+    <%= form.text_field :year %>
+  </div>
+  <div class="apartment_title">
+    <%= form.label :"備考" %>
+    <%= form.text_field :info %>
+  </div>
+  <br><p>・最寄駅１</p>
+  <div class="apartment_title">
+    <%= form.label :"路線名" %>
+    <%= form.text_field :route1 %>
+  </div>
+  <div class="apartment_title">
+    <%= form.label :"最寄駅" %>
+    <%= form.text_field :station1 %>
+  </div>
+  <div class="apartment_title">
+    <%= form.label :"徒歩分数" %>
+    <%= form.text_field :walk %>
+  </div>
+  <br><p>・最寄駅２</p>
+  <div class="apartment_title">
+    <%= form.label :"路線名２" %>
+    <%= form.text_field :routes2 %>
+  </div>
+  <div class="apartment_title">
+    <%= form.label :"最寄駅２" %>
+    <%= form.text_field :station2 %>
+  </div>
+  <div class="apartment_title">
+    <%= form.label :"徒歩分数２" %>
+    <%= form.text_field :walk2 %>
+  </div>
+  <br><%= form.submit %>
+<% end %>
